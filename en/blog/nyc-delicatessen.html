@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NYC Deli Culture: Beyond the Pastrami Sandwich | KAMA Daily</title>
+  <meta name="description" content="Discover NYC's deli culture—from Katz's and 2nd Ave Deli to the history of pastrami, Jewish immigration, and what Kosher certification means. A personal take on the city's iconic delis.">
+  <meta property="og:title" content="NYC Deli Culture: Beyond the Pastrami Sandwich | KAMA Daily">
+  <meta property="og:description" content="NYC deli culture, pastrami history, and Kosher certification. What we learned from visiting the city's iconic Jewish delis.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://kamadaily.example.com/images/nyc-delicatessen.jpeg">
+  <link rel="canonical" href="https://kamadaily.example.com/en/blog/nyc-delicatessen.html">
+  <link rel="alternate" hreflang="ja" href="https://kamadaily.example.com/blog/nyc-delicatessen.html">
+  <link rel="alternate" hreflang="en" href="https://kamadaily.example.com/en/blog/nyc-delicatessen.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --color-white:#fff; --color-light-gray:#f5f5f5; --color-gray:#e8e8e8; --color-dark-gray:#6c757d; --color-accent:#2C3E50; --color-accent-hover:#1a252f; --font-main:"Roboto","Open Sans",sans-serif; --shadow-sm:0 2px 8px rgba(0,0,0,0.06); --shadow-md:0 4px 16px rgba(0,0,0,0.08); --transition:0.3s ease; }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--font-main);font-size:16px;line-height:1.8;color:#333;background:var(--color-white);}
+    a{text-decoration:none;color:inherit;transition:color var(--transition),opacity var(--transition);}
+    img{max-width:100%;height:auto;display:block;}
+    .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.98);box-shadow:var(--shadow-sm);}
+    .header-inner{max-width:1200px;margin:0 auto;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;}
+    .logo-link{display:inline-block;text-decoration:none;transition:opacity 0.3s ease;}
+    .logo-link:hover{opacity:0.8;}
+    .site-logo{height:50px;width:auto;display:block;}
+    .nav-desktop{display:flex;align-items:center;gap:2rem;}
+    .nav-desktop a{font-size:0.95rem;font-weight:500;color:#444;}
+    .nav-desktop a:hover,.nav-desktop a.active{color:var(--color-accent);}
+    .lang-switch{font-size:0.85rem;font-weight:500;padding:0.45rem 0.9rem;border:1px solid var(--color-accent);border-radius:6px;color:var(--color-accent);}
+    .lang-switch:hover{background:var(--color-accent);color:var(--color-white);}
+    .hamburger{display:none;flex-direction:column;gap:6px;background:none;border:none;cursor:pointer;padding:4px;}
+    .hamburger span{width:24px;height:2px;background:var(--color-accent);transition:var(--transition);}
+    .hamburger.is-open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+    .hamburger.is-open span:nth-child(2){opacity:0;}
+    .hamburger.is-open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+    .nav-mobile{display:none;position:fixed;top:60px;left:0;right:0;background:var(--color-white);box-shadow:var(--shadow-md);padding:1.5rem;flex-direction:column;gap:0.5rem;}
+    .nav-mobile.is-open{display:flex;}
+    .nav-mobile a{padding:0.75rem;font-weight:500;border-bottom:1px solid var(--color-gray);}
+    .article-wrap{max-width:800px;margin:0 auto;padding:6rem 1.5rem 4rem;}
+    .article-header{margin-bottom:2rem;}
+    .article-category{font-size:0.85rem;font-weight:500;color:var(--color-accent);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem;}
+    .article-title{font-size:1.75rem;font-weight:700;color:#222;line-height:1.4;margin-bottom:0.75rem;}
+    .article-date{font-size:0.9rem;color:var(--color-dark-gray);margin-bottom:0.5rem;}
+    .article-tags{font-size:0.8rem;color:var(--color-dark-gray);}
+    .article-tags a{margin-right:0.5rem;color:var(--color-accent);}
+    .article-tags a:hover{text-decoration:underline;}
+    .article-eyecatch{border-radius:8px;overflow:hidden;margin-bottom:2rem;box-shadow:var(--shadow-sm);}
+    .article-eyecatch img{width:100%;aspect-ratio:16/10;object-fit:cover;}
+    .article-body{font-size:1rem;color:#444;}
+    .article-body p{margin-bottom:1.25rem;}
+    .article-body h2{font-size:1.25rem;font-weight:700;color:var(--color-accent);margin:2rem 0 1rem;}
+    .article-body h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 0.75rem;}
+    .article-nav{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--color-gray);}
+    .article-nav-prev,.article-nav-next{padding:1rem;border-radius:6px;background:var(--color-light-gray);font-size:0.9rem;}
+    .article-nav-prev{text-align:left;}
+    .article-nav-next{text-align:right;}
+    .article-nav-label{font-size:0.75rem;color:var(--color-dark-gray);margin-bottom:0.25rem;}
+    .article-nav a:hover{color:var(--color-accent);}
+    .article-back{text-align:center;margin-top:2rem;}
+    .btn{display:inline-block;padding:0.75rem 2rem;background:var(--color-accent);color:var(--color-white);font-weight:500;border-radius:6px;transition:background var(--transition),transform var(--transition);}
+    .btn:hover{background:var(--color-accent-hover);transform:translateY(-2px);}
+    .article-share{margin-top:2.5rem;padding:1.5rem;background:var(--color-light-gray);border-radius:8px;}
+    .article-share-title{font-size:0.9rem;font-weight:600;margin-bottom:0.75rem;color:#333;}
+    .article-share-btns{display:flex;flex-wrap:wrap;gap:0.5rem;}
+    .article-share-btns a{display:inline-block;padding:0.5rem 1rem;font-size:0.85rem;font-weight:500;border-radius:6px;color:var(--color-white);}
+    .article-share-btns a:hover{opacity:0.9;}
+    .share-twitter{background:#1DA1F2;}
+    .share-facebook{background:#4267B2;}
+    .related{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--color-gray);}
+    .related-title{font-size:1.25rem;font-weight:700;color:var(--color-accent);margin-bottom:1.5rem;}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+    .related-card{border-radius:8px;overflow:hidden;box-shadow:var(--shadow-sm);transition:transform var(--transition),box-shadow var(--transition);}
+    .related-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+    .related-card-image{aspect-ratio:16/10;overflow:hidden;}
+    .related-card-image img{width:100%;height:100%;object-fit:cover;}
+    .related-card-body{padding:1rem;}
+    .related-card-category{font-size:0.75rem;color:var(--color-accent);font-weight:500;margin-bottom:0.25rem;}
+    .related-card-title{font-size:0.95rem;font-weight:700;line-height:1.4;}
+    .footer{background:var(--color-accent);color:var(--color-white);padding:2rem 1.5rem;text-align:center;margin-top:4rem;}
+    .footer-inner{max-width:1200px;margin:0 auto;}
+    .footer-nav{display:flex;justify-content:center;gap:1.5rem;margin-bottom:1rem;}
+    .footer-nav a{color:rgba(255,255,255,0.9);font-size:0.9rem;}
+    .footer-copy{font-size:0.85rem;opacity:0.8;}
+    @media (max-width:768px){.nav-desktop{display:none;}.hamburger{display:flex;}.site-logo{height:40px;}.article-wrap{padding:5rem 1rem 3rem;}.article-title{font-size:1.5rem;}.related-grid{grid-template-columns:1fr;}}
+    @media (max-width:480px){.site-logo{height:35px;}}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo-link">
+      <img src="../../images/logo-pattern2-custom-kd-terracotta.svg" alt="KAMA Daily" class="site-logo">
+    </a>
+      <nav class="nav-desktop">
+        <a href="../index.html">Home</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="../restaurants.html">Restaurants</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../../blog/nyc-delicatessen.html" class="lang-switch">日本語</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="nav-mobile" id="navMobile">
+      <a href="../index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="../restaurants.html">Restaurants</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../../blog/nyc-delicatessen.html" class="lang-switch">日本語</a>
+    </nav>
+  </header>
+
+  <main class="article-wrap">
+    <article>
+      <header class="article-header">
+        <span class="article-category">NYC Life / Food &amp; Culture</span>
+        <h1 class="article-title">NYC Deli Culture: Beyond the Pastrami Sandwich</h1>
+        <time class="article-date" datetime="2026-02-19">Feb 19, 2026</time>
+        <p class="article-tags">Tags: <a href="blog.html">NYC</a>, <a href="blog.html">Food</a>, <a href="blog.html">Culture</a>, <a href="blog.html">Delicatessen</a>, <a href="blog.html">Restaurant</a></p>
+      </header>
+
+      <div class="article-eyecatch">
+        <img src="../../images/nyc-delicatessen.jpeg" alt="NYC deli: pastrami sandwich">
+      </div>
+
+      <div class="article-body">
+        <p>My first trip to Katz's was as a tourist, there for the famous pastrami sandwich.</p>
+        <p>On the way back, I was strolling through a nearby park when a local woman stopped me. "How was it?" I said it was delicious, and she told me about other great spots—2nd Ave Deli, Sarge's. It got me thinking: I'd been seeing "Deli" and "Delicatessen" signs all over the city.</p>
+        <p>So I looked into NYC's deli culture.</p>
+
+        <h2>The history of the deli—and the pastrami sandwich born in a new world</h2>
+        <p>"Delicatessen" comes from German and means something like "delicious things." The tradition took off when large numbers of Eastern European Jewish immigrants began settling on Manhattan's Lower East Side in the 1880s. Sure enough, Katz's, 2nd Ave Deli, and other famous names are right in that area.</p>
+        <p>What I found interesting: the stacked, fatty pastrami sandwich that tourists love today isn't really a traditional Jewish dish—it's a new food culture that immigrants created in America. Back then, beef was cheap and plentiful in the U.S. in a way that was unthinkable in Europe. They used preservation techniques from Romania and Turkey to turn it into pastrami and corned beef and sold it. That's how it started.</p>
+
+        <h2>Delis today</h2>
+        <p>The 1930s were the golden age. New York had an estimated 3,000 delis—places where Jewish New Yorkers could gather, swap information, and do business.</p>
+        <p>These days, suburban migration, a focus on healthier eating, rising costs, and COVID-19 have taken a heavy toll. Legendary spots like Carnegie Deli and Stage Deli have closed; only around 30 delis are left.</p>
+
+        <h2>My take</h2>
+        <p>Brisket, corned beef, pastrami—all of it is really good.</p>
+        <p>Each place has its own style. Katz's does thick, fatty cuts and huge portions. 2nd Ave Deli is also generous, but the meat is sliced very thin, so it feels a bit lighter. For a big eater like me, a sandwich packed with nothing but meat is a dream either way.</p>
+        <p>I also learned about Kosher certification. It's a system that certifies restaurants that follow traditional Jewish dietary rules—with strict limits on how food is prepared and what can be served. One key rule: meat and dairy can't be served together. So 2nd Ave Deli has no cheesecake, and you don't get milk in your coffee after a meat meal. Cheese pizza without meat is fine; a cheeseburger isn't. Knowing a bit of this before you go changes how you read the menu and order.</p>
+        <p>Living in New York, you notice how the city is shaped by waves of immigration—Chinatown, Little Italy, Koreatown. Each neighborhood tells a different story. The deli is part of that story, and I'm glad I got to dig into it.</p>
+        <p>I'm planning to visit more delis and write them up in our restaurant column.</p>
+      </div>
+
+      <nav class="article-nav">
+        <div class="article-nav-prev" style="visibility:hidden;"><span class="article-nav-label">Previous</span><a href="#">—</a></div>
+        <div class="article-nav-next" style="visibility:hidden;"><span class="article-nav-label">Next</span><a href="#">—</a></div>
+      </nav>
+
+      <div class="article-back">
+        <a href="blog.html" class="btn">Back to blog list</a>
+      </div>
+
+      <div class="article-share">
+        <p class="article-share-title">Share this post</p>
+        <div class="article-share-btns">
+          <a href="#" id="shareTwitter" target="_blank" rel="noopener" class="share-twitter">Twitter</a>
+          <a href="#" id="shareFacebook" target="_blank" rel="noopener" class="share-facebook">Facebook</a>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <nav class="footer-nav">
+        <a href="../index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="../restaurants.html">Restaurants</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 KAMA Daily. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var url=encodeURIComponent(window.location.href);
+      var title=encodeURIComponent(document.querySelector('.article-title').textContent);
+      document.getElementById('shareTwitter').href='https://twitter.com/intent/tweet?url='+url+'&text='+title;
+      document.getElementById('shareFacebook').href='https://www.facebook.com/sharer/sharer.php?u='+url;
+      var h=document.getElementById('hamburger'),n=document.getElementById('navMobile');
+      if(h&&n){h.addEventListener('click',function(){h.classList.toggle('is-open');n.classList.toggle('is-open');document.body.style.overflow=n.classList.contains('is-open')?'hidden':'';});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('is-open');n.classList.remove('is-open');document.body.style.overflow='';});});}
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<svg width="450" height="100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景は透明 -->
+  
+  <!-- ロゴマーク: 円相（ensō）はグレー -->
+  <g id="brush-mark">
+    <!-- 禅的な円弧（ensō）- グレーで控えめに -->
+    <circle cx="30" cy="50" r="20" 
+            fill="none" 
+            stroke="#999999" 
+            stroke-width="4" 
+            stroke-dasharray="100 20"
+            stroke-linecap="round"
+            opacity="0.60"/>
+  </g>
+  
+  <!-- テキスト部分 -->
+  <g id="text">
+    <!-- K - テラコッタカラー -->
+    <text x="70" y="60" 
+          font-family="'Futura', 'Helvetica Neue', sans-serif" 
+          font-size="48" 
+          font-weight="700" 
+          letter-spacing="1" 
+          fill="#C04000">K</text>
+    
+    <!-- AMA - 黒 -->
+    <text x="101" y="60" 
+          font-family="'Futura', 'Helvetica Neue', sans-serif" 
+          font-size="48" 
+          font-weight="700" 
+          letter-spacing="1" 
+          fill="#000000">AMA</text>
+    
+    <!-- スラッシュで区切り - グレー -->
+    <text x="220" y="60" 
+          font-family="'Helvetica Neue', sans-serif" 
+          font-size="48" 
+          font-weight="100" 
+          fill="#CCCCCC">/</text>
+    
+    <!-- D - テラコッタカラー -->
+    <text x="245" y="60" 
+          font-family="'Futura', 'Helvetica Neue', sans-serif" 
+          font-size="48" 
+          font-weight="200" 
+          letter-spacing="2" 
+          fill="#C04000">D</text>
+    
+    <!-- AILY - 黒 -->
+    <text x="274" y="60" 
+          font-family="'Futura', 'Helvetica Neue', sans-serif" 
+          font-size="48" 
+          font-weight="200" 
+          letter-spacing="2" 
+          fill="#000000">AILY</text>
+  </g>
+  
+  <!-- 下部のライン（書道の余韻）- グレー -->
+  <line x1="70" y1="75" x2="420" y2="75" 
+        stroke="#CCCCCC" 
+        stroke-width="1" 
+        opacity="0.3"/>
+</svg>

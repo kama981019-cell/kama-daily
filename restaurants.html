@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurants | KAMA Daily - 日本人夫婦のNYCライフスタイルブログ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-white: #ffffff;
+      --color-light-gray: #f5f5f5;
+      --color-gray: #e8e8e8;
+      --color-dark-gray: #6c757d;
+      --color-accent: #2C3E50;
+      --color-accent-hover: #1a252f;
+      --font-yu: "Yu Gothic", "游ゴシック", "Noto Sans JP", sans-serif;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
+      --transition: 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-yu);
+      font-size: 16px;
+      line-height: 1.7;
+      color: #333;
+      background: var(--color-white);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color var(--transition), opacity var(--transition);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ===== Header ===== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: var(--shadow-sm);
+      transition: background var(--transition), box-shadow var(--transition);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* ========== ロゴスタイル ========== */
+    .logo-link {
+      display: inline-block;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .logo-link:hover {
+      opacity: 0.8;
+    }
+
+    .site-logo {
+      height: 50px;
+      width: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .site-logo {
+        height: 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .site-logo {
+        height: 35px;
+      }
+    }
+
+    .nav-desktop {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-desktop a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #444;
+    }
+
+    .nav-desktop a:hover,
+    .nav-desktop a.active {
+      color: var(--color-accent);
+    }
+
+    .lang-switch {
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.45rem 0.9rem;
+      border: 1px solid var(--color-accent);
+      border-radius: 6px;
+      color: var(--color-accent);
+      transition: background var(--transition), color var(--transition), border-color var(--transition);
+    }
+
+    .lang-switch:hover {
+      background: var(--color-accent);
+      color: var(--color-white);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--color-accent);
+      transition: var(--transition);
+    }
+
+    .hamburger.is-open span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.is-open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.is-open span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: var(--color-white);
+      box-shadow: var(--shadow-md);
+      padding: 1.5rem;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .nav-mobile.is-open {
+      display: flex;
+    }
+
+    .nav-mobile a {
+      padding: 0.75rem;
+      font-weight: 500;
+      border-bottom: 1px solid var(--color-gray);
+    }
+
+    .nav-mobile a:last-child {
+      border-bottom: none;
+    }
+
+    /* ===== Page Hero ===== */
+    .page-hero {
+      padding: 8rem 1.5rem 3rem;
+      background: var(--color-light-gray);
+      text-align: center;
+    }
+
+    .page-hero .section-title {
+      margin-bottom: 0.5rem;
+    }
+
+    .page-hero .section-subtitle {
+      margin-bottom: 0;
+    }
+
+    /* ===== Section ===== */
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--color-dark-gray);
+      margin-bottom: 2.5rem;
+    }
+
+    /* ===== Area Filter ===== */
+    .filter-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .filter-btn {
+      padding: 0.5rem 1.25rem;
+      font-family: var(--font-yu);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--color-accent);
+      background: var(--color-white);
+      border: 2px solid var(--color-accent);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background var(--transition), color var(--transition), transform var(--transition);
+    }
+
+    .filter-btn:hover {
+      background: var(--color-light-gray);
+    }
+
+    .filter-btn.is-active {
+      background: var(--color-accent);
+      color: var(--color-white);
+    }
+
+    .filter-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* ===== Restaurants Grid ===== */
+    .restaurants-section {
+      background: var(--color-white);
+    }
+
+    .restaurants-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .restaurant-card {
+      background: var(--color-white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .restaurant-card.is-hidden {
+      display: none;
+    }
+
+    .restaurant-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .restaurant-card-image-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .restaurant-card-image {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+    }
+
+    .restaurant-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .restaurant-card-body {
+      padding: 1.5rem;
+    }
+
+    .restaurant-card-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .restaurant-card-name a:hover {
+      color: var(--color-accent);
+    }
+
+    .restaurant-card-area {
+      font-size: 0.85rem;
+      color: var(--color-dark-gray);
+      margin-bottom: 0.5rem;
+    }
+
+    .restaurant-card-rating {
+      font-size: 0.9rem;
+      color: #e6a23c;
+      margin-bottom: 0.5rem;
+    }
+
+    .restaurant-card-desc {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .restaurant-card-meta {
+      font-size: 0.8rem;
+      color: var(--color-dark-gray);
+      margin-bottom: 0.35rem;
+      line-height: 1.5;
+    }
+
+    .restaurant-card-body .restaurant-card-meta a {
+      color: var(--color-accent);
+    }
+
+    .restaurant-card-body .restaurant-card-meta a:hover {
+      text-decoration: underline;
+    }
+
+    .restaurant-card-badge {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .restaurant-card-badge.worth-visit {
+      background: #E6F2FF;
+      color: #4A90E2;
+      border: 1px solid #4A90E2;
+    }
+
+    .restaurant-card-badge.kama-favorite {
+      background: #FFF9E6;
+      color: #D4AF37;
+      border: 1px solid #D4AF37;
+    }
+
+    .restaurant-card-badge.honest-review {
+      background: #F5F5F5;
+      color: #95A5A6;
+      border: 1px solid #95A5A6;
+    }
+
+    .restaurant-card-link {
+      display: inline-block;
+      margin-top: 0.75rem;
+      color: var(--color-accent);
+      font-weight: 500;
+      text-decoration: underline;
+    }
+
+    .restaurant-card-link:hover {
+      color: var(--color-accent-hover);
+    }
+
+    .restaurant-no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem;
+      color: var(--color-dark-gray);
+      display: none;
+    }
+
+    .restaurant-no-results.is-visible {
+      display: block;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      background: var(--color-accent);
+      color: var(--color-white);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-nav a {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.9rem;
+    }
+
+    .footer-nav a:hover {
+      color: var(--color-white);
+    }
+
+    .footer-copy {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 992px) {
+      .restaurants-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-desktop {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .page-hero {
+        padding: 6rem 1rem 2.5rem;
+      }
+
+      .restaurants-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .section {
+        padding: 3rem 1rem;
+      }
+
+      .filter-wrap {
+        margin-bottom: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-inner {
+        padding: 0.75rem 1rem;
+      }
+
+      .site-logo {
+        height: 35px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo-pattern2-custom-kd-terracotta.svg" alt="KAMA Daily" class="site-logo">
+      </a>
+      <nav class="nav-desktop">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="restaurants.html" class="active">Restaurants</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="en/restaurants.html" class="lang-switch">EN</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="navMobile">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="en/restaurants.html" class="lang-switch">EN</a>
+    </nav>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <h1 class="section-title">Restaurants</h1>
+    <p class="section-subtitle">NYCでお気に入りのレストラン</p>
+  </section>
+
+  <!-- Restaurant List -->
+  <section class="section restaurants-section">
+    <div class="filter-wrap">
+      <button type="button" class="filter-btn is-active" data-area="all">すべて</button>
+      <button type="button" class="filter-btn" data-area="Manhattan">Manhattan</button>
+      <button type="button" class="filter-btn" data-area="Brooklyn">Brooklyn</button>
+      <button type="button" class="filter-btn" data-area="Queens">Queens</button>
+    </div>
+
+    <div class="restaurants-grid" id="restaurantsGrid">
+      <article class="restaurant-card" id="r1" data-area="Manhattan">
+        <a href="restaurants/manhatta.html" class="restaurant-card-image-link">
+          <div class="restaurant-card-image">
+            <img src="images/manhatta-seabass.jpeg" alt="Charcoal Grilled Seabass at Manhatta">
+          </div>
+        </a>
+        <div class="restaurant-card-body">
+          <div class="restaurant-card-badge worth-visit">👌 Worth a Visit</div>
+          <h2 class="restaurant-card-name">
+            <a href="restaurants/manhatta.html">Manhatta</a>
+          </h2>
+          <p class="restaurant-card-area">Manhattan / Financial District</p>
+          <p class="restaurant-card-meta">予算：$$$ ($100/人)</p>
+          <p class="restaurant-card-meta">住所：28 Liberty St, 60th Floor, New York, NY 10005</p>
+          <p class="restaurant-card-meta">ウェブサイト：<a href="https://www.manhattarestaurant.com/" target="_blank" rel="noopener">manhattarestaurant.com</a></p>
+          <p class="restaurant-card-desc">60階からの絶景とモダンアメリカ料理。景色良し、サービス良し、料理良しの満足度の高いお店。</p>
+          <a href="restaurants/manhatta.html" class="restaurant-card-link">詳細レビューを読む →</a>
+        </div>
+      </article>
+    </div>
+
+    <p class="restaurant-no-results" id="noResults">このエリアにはまだレストランが登録されていません。</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 KAMA Daily. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Area filter
+    (function () {
+      var filterBtns = document.querySelectorAll('.filter-btn');
+      var cards = document.querySelectorAll('.restaurant-card');
+      var noResults = document.getElementById('noResults');
+
+      function filterByArea(area) {
+        var visibleCount = 0;
+        cards.forEach(function (card) {
+          var cardArea = card.getAttribute('data-area');
+          var show = area === 'all' || cardArea === area;
+          card.classList.toggle('is-hidden', !show);
+          if (show) visibleCount++;
+        });
+        noResults.classList.toggle('is-visible', visibleCount === 0);
+      }
+
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var area = this.getAttribute('data-area');
+          filterBtns.forEach(function (b) { b.classList.remove('is-active'); });
+          this.classList.add('is-active');
+          filterByArea(area);
+        });
+      });
+    })();
+
+    // Hamburger menu
+    (function () {
+      var hamburger = document.getElementById('hamburger');
+      var navMobile = document.getElementById('navMobile');
+
+      if (hamburger && navMobile) {
+        hamburger.addEventListener('click', function () {
+          hamburger.classList.toggle('is-open');
+          navMobile.classList.toggle('is-open');
+          document.body.style.overflow = navMobile.classList.contains('is-open') ? 'hidden' : '';
+        });
+
+        navMobile.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            hamburger.classList.remove('is-open');
+            navMobile.classList.remove('is-open');
+            document.body.style.overflow = '';
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
