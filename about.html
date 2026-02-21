@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H3QF23FXZX"></script>
@@ -11,7 +11,7 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | KAMA Daily</title>
+  <title>私たちについて | KAMA Daily</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -36,15 +36,18 @@
     a { text-decoration: none; color: inherit; transition: color var(--transition), opacity var(--transition); }
     img { max-width: 100%; height: auto; display: block; }
 
+    /* ===== Header ===== */
     .header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: rgba(255,255,255,0.98); box-shadow: var(--shadow-sm);
+      background: rgba(255,255,255,0.98);
+      box-shadow: var(--shadow-sm);
+      transition: background var(--transition), box-shadow var(--transition);
     }
     .header-inner {
       max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .logo-link { display: inline-block; transition: opacity 0.3s ease; }
+    .logo-link { display: inline-block; text-decoration: none; transition: opacity 0.3s ease; }
     .logo-link:hover { opacity: 0.8; }
     .site-logo { height: 50px; width: auto; display: block; }
 
@@ -74,6 +77,7 @@
     .nav-mobile a { padding: 0.75rem; font-weight: 500; border-bottom: 1px solid var(--color-gray); }
     .nav-mobile a:last-child { border-bottom: none; }
 
+    /* ===== Page Hero ===== */
     .page-hero {
       padding: 8rem 1.5rem 3rem;
       background: var(--color-light-gray);
@@ -92,18 +96,27 @@
       margin-bottom: 0;
     }
 
+    /* ===== Main ===== */
     main { max-width: 860px; margin: 0 auto; padding: 60px 1.5rem 100px; }
     section { margin-bottom: 70px; }
 
-    .section-label { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+    .section-label {
+      display: flex; align-items: center; gap: 16px; margin-bottom: 28px;
+    }
     .section-label::after { content: ''; flex: 1; height: 1px; background: var(--color-gray); }
-    .section-label span { font-size: 0.75rem; letter-spacing: 0.2em; color: var(--color-terracotta); text-transform: uppercase; white-space: nowrap; font-weight: 500; }
+    .section-label span {
+      font-size: 0.75rem; letter-spacing: 0.2em; color: var(--color-terracotta);
+      text-transform: uppercase; white-space: nowrap; font-weight: 500;
+    }
     .section-title { font-size: 1.5rem; font-weight: 700; color: var(--color-accent); margin-bottom: 20px; }
+
     p { font-size: 0.95rem; color: #444; line-height: 1.9; margin-bottom: 16px; }
 
+    /* ===== Story Card ===== */
     .story-card {
       background: var(--color-white); border: 1px solid var(--color-gray);
-      border-radius: 8px; padding: 40px; position: relative; box-shadow: var(--shadow-sm);
+      border-radius: 8px; padding: 40px; position: relative;
+      box-shadow: var(--shadow-sm);
     }
     .story-card::before {
       content: ''; position: absolute; top: 0; left: 0;
@@ -111,15 +124,19 @@
     }
     .story-card p:last-child { margin-bottom: 0; }
 
+    /* ===== Profiles ===== */
     .profiles-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+
     .profile-card {
       background: var(--color-white); border: 1px solid var(--color-gray);
       border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm);
       transition: transform var(--transition), box-shadow var(--transition);
     }
     .profile-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
     .profile-image-wrap { width: 100%; aspect-ratio: 1 / 1; background: #f0ede8; overflow: hidden; }
     .profile-image-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
     .profile-body { padding: 28px; }
     .profile-tag {
       display: inline-block; font-size: 0.7rem; letter-spacing: 0.15em;
@@ -127,16 +144,19 @@
       padding: 2px 10px; margin-bottom: 12px; border-radius: 3px; font-weight: 500;
     }
     .profile-name { font-size: 1.6rem; font-weight: 700; color: var(--color-accent); margin-bottom: 2px; }
-    .profile-name-sub { font-size: 0.8rem; color: var(--color-dark-gray); margin-bottom: 16px; }
+    .profile-name-ja { font-size: 0.8rem; color: var(--color-dark-gray); margin-bottom: 16px; }
     .profile-divider { height: 1px; background: var(--color-gray); margin-bottom: 16px; }
     .profile-body p { font-size: 0.88rem; color: #555; line-height: 1.9; margin-bottom: 0; }
 
+    /* ===== Rating ===== */
     .rating-intro {
       background: var(--color-white); border: 1px solid var(--color-gray);
       border-radius: 8px; padding: 28px 32px; margin-bottom: 16px; box-shadow: var(--shadow-sm);
     }
     .rating-intro p { margin-bottom: 0; }
+
     .rating-list { display: flex; flex-direction: column; gap: 4px; }
+
     .rating-item {
       display: grid; grid-template-columns: 52px 1fr; gap: 20px; align-items: start;
       background: var(--color-white); border: 1px solid var(--color-gray);
@@ -145,15 +165,18 @@
     }
     .rating-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
     .rating-item.favorite { background: #fdf8f5; border-color: rgba(192,64,0,0.25); }
+
     .rating-icon { font-size: 1.8rem; line-height: 1; padding-top: 2px; }
     .rating-desc strong { font-size: 1rem; font-weight: 700; color: var(--color-accent); display: block; margin-bottom: 4px; }
     .rating-desc p { font-size: 0.88rem; color: #555; line-height: 1.8; margin: 0; }
+
     .rating-note {
       background: #fdf8f5; border-left: 4px solid var(--color-terracotta);
       border-radius: 0 8px 8px 0; padding: 20px 28px; margin-top: 16px;
     }
     .rating-note p { font-size: 0.85rem; color: #666; margin: 0; line-height: 1.9; }
 
+    /* ===== Footer ===== */
     .footer { background: var(--color-accent); color: var(--color-white); padding: 2rem 1.5rem; text-align: center; }
     .footer-inner { max-width: 1200px; margin: 0 auto; }
     .footer-nav { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; }
@@ -161,10 +184,11 @@
     .footer-nav a:hover { color: var(--color-white); }
     .footer-copy { font-size: 0.85rem; opacity: 0.8; }
 
+    /* ===== Responsive ===== */
     @media (max-width: 768px) {
       .nav-desktop { display: none; }
-      .page-hero { padding: 6rem 1rem 2.5rem; }
       .hamburger { display: flex; }
+      .page-hero { padding: 6rem 1rem 2.5rem; }
       .profiles-grid { grid-template-columns: 1fr; gap: 20px; }
       .story-card { padding: 28px 24px; }
       .rating-item { grid-template-columns: 44px 1fr; padding: 20px; }
@@ -181,7 +205,7 @@
   <header class="header">
     <div class="header-inner">
       <a href="index.html" class="logo-link">
-        <img src="../images/logo-pattern2-custom-kd-terracotta.svg" alt="KAMA Daily" class="site-logo">
+        <img src="images/logo-pattern2-custom-kd-terracotta.svg" alt="KAMA Daily" class="site-logo">
       </a>
       <nav class="nav-desktop">
         <a href="index.html">Home</a>
@@ -189,9 +213,9 @@
         <a href="restaurants.html">Restaurants</a>
         <a href="about.html" class="active">About</a>
         <a href="contact.html">Contact</a>
-        <a href="../about.html" class="lang-switch">日本語</a>
+        <a href="en/about.html" class="lang-switch">EN</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -201,54 +225,54 @@
       <a href="restaurants.html">Restaurants</a>
       <a href="about.html" class="active">About</a>
       <a href="contact.html">Contact</a>
-      <a href="../about.html" class="lang-switch">日本語</a>
+      <a href="en/about.html" class="lang-switch">EN</a>
     </nav>
   </header>
 
   <div class="page-hero">
     <h1 class="section-title">About</h1>
-    <p class="section-subtitle">A Japanese couple sharing real life in NYC</p>
+    <p class="section-subtitle">私たちについて</p>
   </div>
 
   <main>
 
     <section>
       <div class="section-label"><span>Our Story</span></div>
-      <h2 class="section-title">About KAMA Daily</h2>
+      <h2 class="section-title">KAMA Dailyとは</h2>
       <div class="story-card">
-        <p>KAMA Daily is a blog by a Japanese couple who moved to Manhattan, New York in 2025.</p>
-        <p>It started with a simple wish — to properly document our life in New York. We plan to write about our daily life, day trips around the city, travels, and everything in between, at our own pace.</p>
-        <p>Since we both love eating above all else, restaurant records will naturally take up a big part of the blog. We hope to capture the atmosphere, the food, the right occasions to visit, and what each of us felt — our honest, personal take on every experience.</p>
-        <p>We'll keep updating little by little, and we hope to grow this blog slowly over time. Thanks for stopping by!</p>
+        <p>2025年、ニューヨーク・マンハッタンに引っ越してきた日本人夫婦によるブログです。</p>
+        <p>NY生活をちゃんと記録しておきたい——そんな思いからブログを始めました。日々の暮らしのこと、近郊へのお出かけ、旅行記など、生活のあれこれをマイペースに綴っていく予定です。</p>
+        <p>とにかく食べることが好きな二人なので、自然とレストランの記録が多くなりそうです。お店の雰囲気や食べたもの、適したシチュエーション、そして二人それぞれが感じたことを書いていければいいなと思っています。</p>
+        <p>マイペースに更新しながら、少しずつ育てていけたらと思っています。よろしくお願いします。</p>
       </div>
     </section>
 
     <section>
       <div class="section-label"><span>Profile</span></div>
-      <h2 class="section-title">Meet Us</h2>
+      <h2 class="section-title">二人のこと</h2>
       <div class="profiles-grid">
         <div class="profile-card">
           <div class="profile-image-wrap">
-            <img src="../images/kamao.png" alt="KAMAO">
+            <img src="images/kamao.png" alt="KAMAO">
           </div>
           <div class="profile-body">
-            <span class="profile-tag">Husband</span>
+            <span class="profile-tag">夫</span>
             <div class="profile-name">KAMAO</div>
-            <div class="profile-name-sub">カマオ</div>
+            <div class="profile-name-ja">カマオ</div>
             <div class="profile-divider"></div>
-            <p>Steak, hamburger, tacos, gyoza, lasagna, carbonara… the list never ends, but hopefully the lineup says something about his appetite. A big lover of beer, wine, and sake. Since moving to NYC, he's fallen deep into the world of cocktails and is happily exploring.</p>
+            <p>ステーキ、ハンバーグ、タコス、餃子、ラザニア、カルボナーラ……好きなものを挙げていくとキリがありませんが、わんぱくなラインナップであることは伝わるでしょうか。お酒も大好きで、ビール・ワイン・日本酒を好んで飲みます。NYに来てからはカクテルの魅力にもハマり、あれこれ探検中です。</p>
           </div>
         </div>
         <div class="profile-card">
           <div class="profile-image-wrap">
-            <img src="../images/kamako.png" alt="KAMAKO">
+            <img src="images/kamako.png" alt="KAMAKO">
           </div>
           <div class="profile-body">
-            <span class="profile-tag">Wife</span>
+            <span class="profile-tag">妻</span>
             <div class="profile-name">KAMAKO</div>
-            <div class="profile-name-sub">カマコ</div>
+            <div class="profile-name-ja">カマコ</div>
             <div class="profile-divider"></div>
-            <p>A shrimp and scallop enthusiast — whenever there's seafood on the table, KAMAO's plate is not safe. Her territory is cafés and sweets; finding new bakeries and dessert spots is her greatest joy. Scanning the streets for the next great café has quietly become a daily habit.</p>
+            <p>エビとホタテが大好きで、海鮮系の具材があるときはKAMAOのお皿からこっそり拝借することも。カフェとスイーツが担当エリアで、新しいベーカリーやデザートスポットを見つけるのが一番の楽しみです。街を歩きながらお店を探すのが、気づけば日課になっていました。</p>
           </div>
         </div>
       </div>
@@ -256,36 +280,36 @@
 
     <section>
       <div class="section-label"><span>Rating</span></div>
-      <h2 class="section-title">How We Rate</h2>
+      <h2 class="section-title">評価について</h2>
       <div class="rating-intro">
-        <p>Each restaurant review includes a 3-tier rating based on our honest, combined impressions.</p>
+        <p>レストランのレビューには、二人の正直な感想をもとにした3段階の評価をつけています。</p>
       </div>
       <div class="rating-list">
         <div class="rating-item favorite">
           <div class="rating-icon">🏅</div>
           <div class="rating-desc">
             <strong>KAMA's Favorite</strong>
-            <p>We both left completely satisfied and would absolutely go back. Our highest recommendation.</p>
+            <p>二人そろって大満足で、また絶対に行きたいと思えたお店。自信を持っておすすめします。</p>
           </div>
         </div>
         <div class="rating-item">
           <div class="rating-icon">👌</div>
           <div class="rating-desc">
             <strong>Worth a Visit</strong>
-            <p>We enjoyed it and were glad we went. Worth adding to your NYC list.</p>
+            <p>楽しめた、行って良かったと感じたお店。NYに来たらぜひ足を運んでみてください。</p>
           </div>
         </div>
         <div class="rating-item">
           <div class="rating-icon">📋</div>
           <div class="rating-desc">
             <strong>Honest Review</strong>
-            <p>Most restaurants will fall here. We'll share both the highlights and the drawbacks honestly, with notes on who it might suit best.</p>
+            <p>多くのお店はここに入ってくるかと思います。良い点も惜しい点も含めて正直にお伝えしながら、好みやシチュエーションによって使い分けやすいようにコメントしていきます。</p>
           </div>
         </div>
       </div>
       <div class="rating-note">
-        <p>Our reviews are based entirely on our own personal experiences. The same restaurant can feel quite different depending on the day or occasion, so please take our ratings as one perspective among many.</p>
-        <p>As for photos — sometimes we can take them, sometimes we can't, depending on the vibe of the place or who we're dining with. But we'll do our best to share as many as we can.</p>
+        <p>評価はあくまで二人の主観です。同じお店でも訪問する日やタイミングによって体験は異なることもあります。ひとつの参考として読んでいただけたら嬉しいです。</p>
+        <p>写真についてはお店の雰囲気やそのとき一緒に行く人たちによっては撮れたり撮れなかったりありますが、なるべく載せられるように頑張りたいなと。</p>
       </div>
     </section>
 

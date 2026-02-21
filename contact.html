@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H3QF23FXZX"></script>
@@ -11,10 +11,10 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | KAMA Daily - Japanese Couple's NYC Lifestyle Blog</title>
+  <title>Contact | KAMA Daily - 日本人夫婦のNYCライフスタイルブログ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --color-white: #ffffff;
@@ -23,7 +23,7 @@
       --color-dark-gray: #6c757d;
       --color-accent: #2C3E50;
       --color-accent-hover: #1a252f;
-      --font-main: "Roboto", "Open Sans", sans-serif;
+      --font-yu: "Yu Gothic", "游ゴシック", "Noto Sans JP", sans-serif;
       --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
       --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
       --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -41,7 +41,7 @@
     }
 
     body {
-      font-family: var(--font-main);
+      font-family: var(--font-yu);
       font-size: 16px;
       line-height: 1.7;
       color: #333;
@@ -259,7 +259,7 @@
     .form-group textarea {
       width: 100%;
       padding: 0.75rem 1rem;
-      font-family: var(--font-main);
+      font-family: var(--font-yu);
       font-size: 1rem;
       color: #333;
       background: var(--color-white);
@@ -293,7 +293,7 @@
       display: inline-block;
       width: 100%;
       padding: 0.875rem 2rem;
-      font-family: var(--font-main);
+      font-family: var(--font-yu);
       font-size: 1rem;
       font-weight: 500;
       color: var(--color-white);
@@ -407,7 +407,7 @@
   <header class="header">
     <div class="header-inner">
       <a href="index.html" class="logo-link">
-        <img src="../images/logo-pattern2-custom-kd-terracotta.svg" alt="KAMA Daily" class="site-logo">
+        <img src="images/logo-pattern2-custom-kd-terracotta.svg" alt="KAMA Daily" class="site-logo">
       </a>
       <nav class="nav-desktop">
         <a href="index.html">Home</a>
@@ -415,9 +415,9 @@
         <a href="restaurants.html">Restaurants</a>
         <a href="about.html">About</a>
         <a href="contact.html" class="active">Contact</a>
-        <a href="../contact.html" class="lang-switch">日本語</a>
+        <a href="en/contact.html" class="lang-switch">EN</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
         <span></span>
         <span></span>
         <span></span>
@@ -429,36 +429,36 @@
       <a href="restaurants.html">Restaurants</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="../contact.html" class="lang-switch">日本語</a>
+      <a href="en/contact.html" class="lang-switch">EN</a>
     </nav>
   </header>
 
   <!-- Page Hero -->
   <section class="page-hero">
     <h1 class="section-title">Contact</h1>
-    <p class="section-subtitle">Get in touch</p>
+    <p class="section-subtitle">お問い合わせ</p>
   </section>
 
   <!-- Contact Form -->
   <section class="section contact-section">
     <div class="contact-form-wrap">
-      <p class="section-subtitle" style="margin-bottom: 1.5rem;">Have a question or feedback? Send us a message using the form below.</p>
+      <p class="section-subtitle" style="margin-bottom: 1.5rem;">ご質問やご感想がありましたら、以下のフォームからお送りください。</p>
 
       <form id="contactForm" action="#" method="post" novalidate>
         <div class="form-group">
-          <label for="name">Name<span class="required">*</span></label>
-          <input type="text" id="name" name="name" placeholder="Your name" required>
+          <label for="name">名前<span class="required">*</span></label>
+          <input type="text" id="name" name="name" placeholder="お名前を入力" required>
         </div>
         <div class="form-group">
-          <label for="email">Email<span class="required">*</span></label>
+          <label for="email">メールアドレス<span class="required">*</span></label>
           <input type="email" id="email" name="email" placeholder="example@email.com" required>
         </div>
         <div class="form-group">
-          <label for="message">Message<span class="required">*</span></label>
-          <textarea id="message" name="message" placeholder="Your message" required></textarea>
+          <label for="message">メッセージ<span class="required">*</span></label>
+          <textarea id="message" name="message" placeholder="メッセージを入力してください" required></textarea>
         </div>
         <div class="form-submit">
-          <button type="submit" class="btn" id="submitBtn">Send</button>
+          <button type="submit" class="btn" id="submitBtn">送信する</button>
         </div>
         <p class="form-message" id="formMessage"></p>
       </form>
@@ -497,21 +497,21 @@
           formMessage.classList.remove('success', 'error', 'is-visible');
 
           if (!name || !email || !message) {
-            formMessage.textContent = 'Please fill in all fields.';
+            formMessage.textContent = 'すべての項目を入力してください。';
             formMessage.classList.add('error', 'is-visible');
             return;
           }
 
           submitBtn.disabled = true;
-          submitBtn.textContent = 'Sending...';
+          submitBtn.textContent = '送信中...';
 
           // Demo: simulate send
           setTimeout(function () {
-            formMessage.textContent = 'Thank you for your message. We\'ll get back to you soon.';
+            formMessage.textContent = '送信しました。お問い合わせありがとうございます。';
             formMessage.classList.add('success', 'is-visible');
             form.reset();
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Send';
+            submitBtn.textContent = '送信する';
           }, 800);
         });
       }
