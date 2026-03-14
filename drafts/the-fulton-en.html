@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H3QF23FXZX"></script>
@@ -11,11 +11,11 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5 Napkin Burger | KAMA Daily</title>
-  <meta name="description" content="Hell's KitchenでKAMAOが何度もリピートするバーガーの名店。ボリューム満点の厚切りパティ、充実したメニュー、使い勝手のいいハッピーアワーも魅力。NYC在住・旅行者どちらにもおすすめの一軒。">
-  <link rel="canonical" href="https://kamadaily.example.com/drafts/5-napkin-burger.html">
-  <link rel="alternate" hreflang="en" href="https://kamadaily.example.com/drafts/5-napkin-burger-en.html">
-  <link rel="alternate" hreflang="ja" href="https://kamadaily.example.com/drafts/5-napkin-burger.html">
+  <title>The Fulton by Jean-Georges Review - Seafood and skyline, with the Brooklyn Bridge in view. | KAMA Daily</title>
+  <meta name="description" content="The Fulton by Jean-Georges at Pier 17, Seaport. Jean-Georges Vongerichten's first seafood-focused restaurant — Restaurant Week $60 dinner and Brooklyn Bridge views.">
+  <link rel="canonical" href="https://kamadaily.example.com/drafts/the-fulton-en.html">
+  <link rel="alternate" hreflang="en" href="https://kamadaily.example.com/drafts/the-fulton-en.html">
+  <link rel="alternate" hreflang="ja" href="https://kamadaily.example.com/drafts/the-fulton.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -31,6 +31,8 @@
       --color-kama-favorite-bg: #FFF9E6;
       --color-worth-visit: #4A90E2;
       --color-worth-visit-bg: #E6F2FF;
+      --color-honest-review: #5A9E8F;
+      --color-honest-review-bg: #EDF5F3;
       --font-yu: "Yu Gothic", "游ゴシック", "Noto Sans JP", sans-serif;
       --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
       --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -128,6 +130,11 @@
       background: var(--color-worth-visit-bg);
       border-color: var(--color-worth-visit);
     }
+    .review-category.honest-review {
+      background: var(--color-honest-review-bg);
+      border-color: var(--color-honest-review);
+    }
+    .review-category.honest-review .category-icon { color: var(--color-honest-review); }
     .ratings-section {
       margin: 2rem auto;
       padding: 1.5rem;
@@ -170,47 +177,47 @@
       <nav class="nav-desktop">
         <a href="../index.html">Home</a>
         <a href="../blog.html">Blog</a>
-        <a href="../restaurants.html" class="active">Restaurants</a>
+        <a href="../restaurants-en.html" class="active">Restaurants</a>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
-        <a href="5-napkin-burger-en.html" class="lang-switch">EN</a>
+        <a href="the-fulton.html" class="lang-switch">JP</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
     <nav class="nav-mobile" id="navMobile">
       <a href="../index.html">Home</a>
       <a href="../blog.html">Blog</a>
-      <a href="../restaurants.html">Restaurants</a>
+      <a href="../restaurants-en.html">Restaurants</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
-      <a href="5-napkin-burger-en.html" class="lang-switch">EN</a>
+      <a href="the-fulton.html" class="lang-switch">JP</a>
     </nav>
   </header>
 
   <nav class="breadcrumb">
-    <a href="../index.html">ホーム</a> &gt;
-    <a href="../restaurants.html">レストラン一覧</a> &gt;
-    <span>5 Napkin Burger</span>
+    <a href="../index.html">Home</a> &gt;
+    <a href="../restaurants-en.html">Restaurants</a> &gt;
+    <span>The Fulton by Jean-Georges</span>
   </nav>
 
   <main>
     <section class="restaurant-hero">
       <div class="restaurant-hero-image">
-        <img src="../images/5napkinburger-IMG_8210.jpeg" alt="5 Napkin Burger Hell's Kitchen" loading="eager">
+        <img src="../images/thefulton-IMG_7852.jpeg" alt="The Fulton by Jean-Georges" loading="eager">
       </div>
       <div class="restaurant-hero-overlay">
-        <h1 class="restaurant-hero-title">5 Napkin Burger</h1>
-        <p class="restaurant-hero-subtitle">地元民が通い続けるHell's Kitchenのバーガーの名店</p>
+        <h1 class="restaurant-hero-title">The Fulton by Jean-Georges</h1>
+        <p class="restaurant-hero-subtitle">Seafood and skyline, with the Brooklyn Bridge in view.</p>
       </div>
     </section>
 
     <div class="restaurant-main">
-      <section class="review-category">
+      <section class="review-category honest-review">
         <div class="category-badge">
-          <span class="category-icon">🏅</span>
-          <h2 class="category-title">KAMA's Favorite</h2>
+          <span class="category-icon">📋</span>
+          <h2 class="category-title">Honest Review</h2>
         </div>
-        <p class="category-description">二人そろって大満足で、また絶対に行きたいと思えたお店。自信を持っておすすめします。</p>
+        <p class="category-description">Most restaurants fall into this category. We share both the highlights and the things that fell a little short, so you can decide if it's the right fit for your taste and occasion.</p>
       </section>
 
       <section class="ratings-section">
@@ -218,78 +225,87 @@
         <div class="rating-item">
           <div class="rating-source-info">
             <span class="rating-source">Google Maps</span>
-            <span class="rating-value">4.3 ⭐</span>
+            <span class="rating-value">4.2 ⭐</span>
           </div>
-          <p class="rating-date">※2026年2月時点</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=5+Napkin+Burger+630+9th+Ave+New+York" target="_blank" rel="noopener" class="rating-link">View on Google Maps →</a>
+          <p class="rating-date">As of March 2026</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Fulton+by+Jean-Georges+89+South+St+New+York" target="_blank" rel="noopener" class="rating-link">View on Google Maps →</a>
         </div>
         <div class="rating-item">
           <div class="rating-source-info">
             <span class="rating-source">Yelp</span>
-            <span class="rating-value">3.8 ⭐</span>
+            <span class="rating-value">3.6 ⭐ (500+ reviews)</span>
           </div>
-          <p class="rating-date">※2026年2月時点</p>
-          <a href="https://www.yelp.com/biz/5-napkin-burger-new-york-11" target="_blank" rel="noopener" class="rating-link">View on Yelp →</a>
+          <p class="rating-date">As of March 2026</p>
+          <a href="https://www.yelp.com/biz/the-fulton-by-jean-georges-new-york-2" target="_blank" rel="noopener" class="rating-link">View on Yelp →</a>
         </div>
       </section>
 
       <section class="info-card">
-        <h2 class="info-card-title">基本情報</h2>
+        <h2 class="info-card-title">Details</h2>
         <ul class="info-card-list">
-          <li><span class="info-card-icon">📍</span> <span>住所：630 9th Ave, New York, NY 10036（Hell's Kitchen）</span></li>
-          <li><span class="info-card-icon">💰</span> <span>予算：$35〜50 / 人</span></li>
-          <li><span class="info-card-icon">🕐</span> <span>営業時間：月〜金 11:30–23:00 / 土・日 10:00–23:00（ブランチあり） / ハッピーアワー：月〜金 15:00–18:00</span></li>
-          <li><span class="info-card-icon">📅</span> <span>予約：ウォークイン可。公式サイトまたは<a href="https://resy.com" target="_blank" rel="noopener" class="external">Resy</a>から予約可能。混雑時はウェイトあり。</span></li>
-          <li><span class="info-card-icon">🌐</span> <span>公式サイト：<a href="https://www.5napkinburger.com/" target="_blank" rel="noopener" class="external">5napkinburger.com</a></span></li>
+          <li><span class="info-card-icon">📍</span> <span>Address: 89 South St, New York, NY 10038 (Pier 17, Seaport)</span></li>
+          <li><span class="info-card-icon">💰</span> <span>Budget: Dinner approx. $80–120 per person (Restaurant Week $60 course mentioned in review)</span></li>
+          <li><span class="info-card-icon">🕐</span> <span>Hours: Brunch Sat–Sun 11:30am–3:00pm / Dinner Mon–Sun 5:00pm–9:00pm</span></li>
+          <li><span class="info-card-icon">📅</span> <span>Reservations: Via website (<a href="https://www.thefulton.nyc/" target="_blank" rel="noopener" class="external">thefulton.nyc</a>) Reservations link or SevenRooms. Walk-ins subject to availability.</span></li>
+          <li><span class="info-card-icon">🌐</span> <span>Website: <a href="https://www.thefulton.nyc/" target="_blank" rel="noopener" class="external">thefulton.nyc</a></span></li>
         </ul>
         <div class="map-wrap">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0!2d-73.9881!3d40.7619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f56f649165%3A0x1!2s630%209th%20Ave%2C%20New%20York%2C%20NY%2010036!5e0!3m2!1sen!2sus!4v1708000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" title="5 Napkin Burger の場所"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.0!2d-74.001024!3d40.7053729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1!2s89%20South%20St%2C%20New%20York%2C%20NY%2010038!5e0!3m2!1sen!2sus!4v1708000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" title="The Fulton by Jean-Georges location"></iframe>
         </div>
       </section>
 
       <article class="review-section">
-        <h2>総評</h2>
-        <p>5 Napkin Burgerは気づけば足を運んでいる地元のお気に入り。NYCのバーガーシーンではパティが薄くて香ばしいスマッシュバーガーをよく見かけるが、ここはハンバーグのようにずっしりと厚いパティを使ったボリューミースタイル。ジューシーさを最大限に引き出すミディアムの焼き加減がおすすめで、食べ応えは申し分ない。バーガーの種類も豊富で、何度来ても飽きない。複数回通った末にたどり着いた結論は、どれを頼んでも外れがないということ。スターターのTuna Pokeもお気に入りで、サクサクのナチョスにポケソースが美味しく酒の肴にもなる。締めのシェイクも美味しいらしいのだが、シェイクにはまだ辿り着けていない。</p>
+        <h2>Overview</h2>
+        <p>The Fulton is a seafood restaurant perched on Pier 17 in Manhattan's Seaport district, helmed by French-born culinary legend Jean-Georges Vongerichten — and notably his first seafood-focused concept among his 35+ restaurants worldwide. We visited for a Restaurant Week dinner course at $60, and the cooking was consistently careful and polished, well beyond what the price might suggest. The highlight was the Roasted Skate Wing — a first for both of us — whose rich, fatty flesh was reminiscent of salmon belly in the best possible way. That said, some dishes landed more strongly than others; the tartare leaned heavily on its dressing, which slightly overshadowed the fish itself.</p>
 
-        <h2>雰囲気・アクセス</h2>
-        <p>Hell's Kitchenのど真ん中に位置する、地元に根ざしたカジュアルなバーガーレストラン。観光客も地元住民も気兼ねなく入れる雰囲気で、ランチからディナー、週末のブランチまで幅広く対応している。月曜から金曜の15時〜18時にはハッピーアワーがあり、ドリンクが割引になるのも嬉しいポイント。ビールを飲みながらつまめるスターターと組み合わせると、気づけば飲みすぎてしまうのが悩みどころ。</p>
-        <p>席はゆったりとしたブース席とバーカウンターが中心で、アメリカンダイナーらしいくつろいだ雰囲気。内装はシンプルながらも落ち着いていて、長居したくなる空間になっている。Upper West Sideにも支店があり、そちらはメニューに寿司が加わるという一風変わったラインナップも楽しめるらしい。いつか行き比べてみたいと思っている。</p>
-
-        <h2>料理について</h2>
-
-        <h3>前菜</h3>
-        <p>TUNA POKE</p>
-
-        <h3>メイン</h3>
-        <p>CLASSIC CHEESE</p>
+        <h2>Atmosphere &amp; Access</h2>
+        <p>Situated on Pier 17 along the East River, The Fulton is one of Manhattan's most scenically located restaurants. At night, the illuminated Brooklyn Bridge fills the floor-to-ceiling glass walls and makes the room feel genuinely special. The outdoor terrace is apparently lovely in summer — a different experience altogether — so the restaurant rewards returning in different seasons. It's also an easy stop to add onto a walk along the waterfront or a visit to the Brooklyn Bridge area.</p>
         <div class="review-dish-image">
-          <img src="../images/5napkinburger-IMG_8210.jpeg" alt="CLASSIC CHEESE" loading="lazy">
+          <img src="../images/thefulton-IMG_7856.jpeg" alt="The Fulton interior and Brooklyn Bridge view" loading="lazy">
         </div>
 
-        <p>ORIGINAL 5 NAPKIN BURGER</p>
+        <h2>Food</h2>
+
+        <h3>Starters</h3>
+        <p>Long Island Fluke Tartare</p>
         <div class="review-dish-image">
-          <img src="../images/5napkinburger-IMG_8211.jpeg" alt="ORIGINAL 5 NAPKIN BURGER" loading="lazy">
+          <img src="../images/thefulton-IMG_7851.jpeg" alt="Long Island Fluke Tartare" loading="lazy">
         </div>
 
-        <p>LAMB KOFTA BURGER（時期により提供）</p>
+        <h3>Mains</h3>
+        <p>Roasted Skate Wing</p>
         <div class="review-dish-image">
-          <img src="../images/5napkinburger-IMG_8212.jpeg" alt="LAMB KOFTA BURGER" loading="lazy">
+          <img src="../images/thefulton-IMG_7853.jpeg" alt="Roasted Skate Wing" loading="lazy">
+        </div>
+        <p>Lumache</p>
+        <div class="review-dish-image">
+          <img src="../images/thefulton-IMG_7852.jpeg" alt="Lumache" loading="lazy">
+        </div>
+
+        <h3>Dessert</h3>
+        <p>House-Made Ice Cream and Sorbet</p>
+        <div class="review-dish-image">
+          <img src="../images/thefulton-IMG_7855.jpeg" alt="House-Made Ice Cream and Sorbet" loading="lazy">
+        </div>
+        <p>The Fulton Cookie Plate</p>
+        <div class="review-dish-image">
+          <img src="../images/thefulton-IMG_7854.jpeg" alt="The Fulton Cookie Plate" loading="lazy">
         </div>
       </article>
 
       <section class="summary-box">
-        <h2>ひとこと</h2>
-        <p>セパレートされた席に深めのソファ、ゆったりできるアメリカンダイナー。地元民の贔屓目を差し引いても、Hell's Kitchenに来たら一度は足を運んでほしい一軒。</p>
-        <p><strong>こんな人におすすめ</strong></p>
+        <h2>One-liner</h2>
+        <p>Restaurant Week unlocks a $60 dinner with Brooklyn Bridge views and Jean-Georges-level cooking. Factor in the setting, and it's an evening well spent.</p>
+        <p><strong>Who it's for</strong></p>
         <ul>
-          <li>ボリュームたっぷりのバーガーを食べたい人</li>
-          <li>ハッピーアワーでコスパよく飲みたい人</li>
-          <li>Hell's Kitchen周辺でランチ〜ディナーまで使えるお店を探している人</li>
+          <li>Anyone who wants a memorable dinner with a front-row view of the Brooklyn Bridge at night</li>
+          <li>Diners looking to experience Jean-Georges' cooking at a more accessible price point during Restaurant Week</li>
+          <li>Seafood lovers curious to try lesser-known cuts and catches like skate wing</li>
         </ul>
       </section>
 
       <p style="margin-top: 2rem; text-align: center;">
-        <a href="../restaurants.html" style="display: inline-block; padding: 0.75rem 2rem; background: var(--color-accent); color: var(--color-white); font-weight: 500; border-radius: 6px;">← レストラン一覧に戻る</a>
+        <a href="../restaurants-en.html" style="display: inline-block; padding: 0.75rem 2rem; background: var(--color-accent); color: var(--color-white); font-weight: 500; border-radius: 6px;">← Back to Restaurants</a>
       </p>
     </div>
   </main>
@@ -299,7 +315,7 @@
       <nav class="footer-nav">
         <a href="../index.html">Home</a>
         <a href="../blog.html">Blog</a>
-        <a href="../restaurants.html">Restaurants</a>
+        <a href="../restaurants-en.html">Restaurants</a>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
       </nav>
